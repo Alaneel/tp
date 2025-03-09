@@ -5,6 +5,12 @@ import seedu.finbro.storage.Storage;
 import seedu.finbro.ui.Ui;
 
 /**
+ * @author alanwang
+ * @project tp
+ * @date 9/3/25
+ */
+
+/**
  * Represents an invalid command.
  */
 public class InvalidCommand implements Command {

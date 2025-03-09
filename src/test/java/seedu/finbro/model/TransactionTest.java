@@ -3,11 +3,16 @@ package seedu.finbro.model;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * @author alanwang
+ * @project tp
+ * @date 9/3/25
+ */
 
 /**
  * Tests for the Transaction class and its subclasses.

@@ -11,6 +11,12 @@ import seedu.finbro.ui.Ui;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
+ * @author alanwang
+ * @project tp
+ * @date 9/3/25
+ */
+
+/**
  * Tests for the Parser class.
  */
 public class ParserTest {

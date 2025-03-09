@@ -12,6 +12,12 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
+ * @author alanwang
+ * @project tp
+ * @date 9/3/25
+ */
+
+/**
  * Represents a command to view a financial summary.
  */
 public class SummaryCommand implements Command {
