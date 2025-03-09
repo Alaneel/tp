@@ -1,9 +1,166 @@
-Hello from
- ____        _        
-|  _ \ _   _| | _____ 
-| | | | | | | |/ / _ \
-| |_| | |_| |   <  __/
-|____/ \__,_|_|\_\___|
+____________________________________________________________
+Welcome to FinBro - Your Personal Finance Manager!
+Type 'help' to see available commands.
+____________________________________________________________
+> ____________________________________________________________
+Available commands:
+income AMOUNT d/DESCRIPTION [t/TAG...] - Add income
+expense AMOUNT d/DESCRIPTION [c/CATEGORY] [t/TAG...] - Add expense
+list [n/NUMBER] [d/DATE] - List transactions
+delete INDEX - Delete a transaction
+search KEYWORD [MORE_KEYWORDS] - Search transactions
+filter d/DATE [to/DATE] - Filter transactions by date
+balance - View current balance
+summary [m/MONTH] [y/YEAR] - View financial summary
+export [f/FORMAT] - Export data (csv or txt)
+clear - Clear all data
+exit - Exit the program
+help - Show this help message
+____________________________________________________________
+> ____________________________________________________________
+New income added: [Income] $3000.00 - Monthly salary [work]
+____________________________________________________________
+> ____________________________________________________________
+New income added: [Income] $500.50 - Freelance design project [graphic-design]
+____________________________________________________________
+> ____________________________________________________________
+New income added: [Income] $1200.00 - Tax refund
+____________________________________________________________
+> ____________________________________________________________
+New expense added: [Expense][Food] $25.50 - Lunch with colleagues [work]
+____________________________________________________________
+> ____________________________________________________________
+New expense added: [Expense][Shopping] $75.00 - New shoes
+____________________________________________________________
+> ____________________________________________________________
+New expense added: [Expense][Bills] $150.20 - Electricity bill [home]
+____________________________________________________________
+> ____________________________________________________________
+New expense added: [Expense][Transport] $10.80 - Bus fare
+____________________________________________________________
+> ____________________________________________________________
+New expense added: [Expense][Entertainment] $45.99 - Movie tickets [weekend]
+____________________________________________________________
+> ____________________________________________________________
+New expense added: [Expense][Food] $120.00 - Groceries [essential]
+____________________________________________________________
+> ____________________________________________________________
+Here are your transactions:
+1. [Income] $3000.00 - Monthly salary [work]
+2. [Income] $500.50 - Freelance design project [graphic-design]
+3. [Income] $1200.00 - Tax refund
+4. [Expense][Food] $25.50 - Lunch with colleagues [work]
+5. [Expense][Shopping] $75.00 - New shoes
+6. [Expense][Bills] $150.20 - Electricity bill [home]
+7. [Expense][Transport] $10.80 - Bus fare
+8. [Expense][Entertainment] $45.99 - Movie tickets [weekend]
+9. [Expense][Food] $120.00 - Groceries [essential]
+____________________________________________________________
+> ____________________________________________________________
+Here are your transactions:
+1. [Income] $3000.00 - Monthly salary [work]
+2. [Income] $500.50 - Freelance design project [graphic-design]
+3. [Income] $1200.00 - Tax refund
+____________________________________________________________
+> ____________________________________________________________
+Here are your transactions:
+1. [Income] $3000.00 - Monthly salary [work]
+2. [Income] $500.50 - Freelance design project [graphic-design]
+3. [Income] $1200.00 - Tax refund
+4. [Expense][Food] $25.50 - Lunch with colleagues [work]
+5. [Expense][Shopping] $75.00 - New shoes
+6. [Expense][Bills] $150.20 - Electricity bill [home]
+7. [Expense][Transport] $10.80 - Bus fare
+8. [Expense][Entertainment] $45.99 - Movie tickets [weekend]
+9. [Expense][Food] $120.00 - Groceries [essential]
+____________________________________________________________
+> ____________________________________________________________
+Found 1 matching transaction(s):
+1. [Expense][Food] $25.50 - Lunch with colleagues [work]
+____________________________________________________________
+> ____________________________________________________________
+Found 2 matching transaction(s):
+1. [Income] $3000.00 - Monthly salary [work]
+2. [Expense][Bills] $150.20 - Electricity bill [home]
+____________________________________________________________
+> ____________________________________________________________
+No transactions found in the specified date range.
+____________________________________________________________
+> ____________________________________________________________
+Current Balance: $4273.01
+Total Income: $4700.50
+Total Expenses: $427.49
+____________________________________________________________
+> ____________________________________________________________
+Financial Summary for March 2025:
+Total Income: $4700.50
+Total Expenses: $427.49
+Net Balance: $4273.01
 
-What is your name?
-Hello James Gosling
+Expenses by Category:
+Transport: $10.80 (2.5%)
+Shopping: $75.00 (17.5%)
+Bills: $150.20 (35.1%)
+Food: $145.50 (34.0%)
+Entertainment: $45.99 (10.8%)
+____________________________________________________________
+> ____________________________________________________________
+Financial Summary for February 2025:
+Total Income: $0.00
+Total Expenses: $0.00
+Net Balance: $0.00
+
+No expenses recorded for this period.
+____________________________________________________________
+> ____________________________________________________________
+Data exported successfully to: exports/finbro_export_20250309.csv
+____________________________________________________________
+> ____________________________________________________________
+Transaction deleted: [Income] $1200.00 - Tax refund
+____________________________________________________________
+> ____________________________________________________________
+Here are your transactions:
+1. [Income] $3000.00 - Monthly salary [work]
+2. [Income] $500.50 - Freelance design project [graphic-design]
+3. [Expense][Food] $25.50 - Lunch with colleagues [work]
+4. [Expense][Shopping] $75.00 - New shoes
+5. [Expense][Bills] $150.20 - Electricity bill [home]
+6. [Expense][Transport] $10.80 - Bus fare
+7. [Expense][Entertainment] $45.99 - Movie tickets [weekend]
+8. [Expense][Food] $120.00 - Groceries [essential]
+____________________________________________________________
+> ____________________________________________________________
+Are you sure you want to clear all data? This action cannot be undone. Type 'clear confirm' to confirm.
+____________________________________________________________
+> ____________________________________________________________
+Unknown command: n
+Type 'help' to see available commands.
+____________________________________________________________
+> ____________________________________________________________
+Are you sure you want to clear all data? This action cannot be undone. Type 'clear confirm' to confirm.
+____________________________________________________________
+> ____________________________________________________________
+Unknown command: y
+Type 'help' to see available commands.
+____________________________________________________________
+> ____________________________________________________________
+New income added: [Income] $2000.00 - New job payment [work]
+____________________________________________________________
+> ____________________________________________________________
+New expense added: [Expense][Food] $30.00 - Dinner
+____________________________________________________________
+> ____________________________________________________________
+Current Balance: $5043.01
+Total Income: $5500.50
+Total Expenses: $457.49
+____________________________________________________________
+> ____________________________________________________________
+Data exported successfully to: exports/finbro_export_20250309.txt
+____________________________________________________________
+> ____________________________________________________________
+Goodbye! Thank you for using FinBro.
+____________________________________________________________
+____________________________________________________________
+Thank you for using FinBro. Your finances are now in better shape!
+Goodbye!
+____________________________________________________________

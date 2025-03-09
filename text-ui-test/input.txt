@@ -1,1 +1,31 @@
-James Gosling
+help
+income 3000 d/Monthly salary t/work
+income 500.50 d/Freelance design project t/side-hustle t/graphic-design
+income 1200 d/Tax refund
+expense 25.50 d/Lunch with colleagues c/Food t/work
+expense 75 d/New shoes c/Shopping
+expense 150.20 d/Electricity bill c/Bills t/monthly t/home
+expense 10.80 d/Bus fare c/Transport
+expense 45.99 d/Movie tickets c/Entertainment t/weekend
+expense 120 d/Groceries c/Food t/essential
+list
+list n/3
+list d/2025-02-01
+search lunch
+search bill monthly
+filter d/2025-02-01 to/2025-02-28
+balance
+summary
+summary m/2 y/2025
+export f/csv
+delete 3
+list
+clear
+n
+clear
+y
+income 2000 d/New job payment t/work
+expense 30 d/Dinner c/Food
+balance
+export f/txt
+exit
