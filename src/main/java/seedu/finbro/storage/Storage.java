@@ -9,13 +9,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.Map;
 
 import seedu.finbro.model.Expense;
 import seedu.finbro.model.Income;
@@ -281,28 +277,28 @@ public class Storage {
     public String exportToCsv(TransactionManager transactionManager) throws IOException {
         assert transactionManager != null : "TransactionManager cannot be null";
         assert exportDirectoryPath != null : "Export directory path cannot be null";
-        
+
         String fileName = "finbro_export_" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd")) + ".csv";
         String filePath = exportDirectoryPath + File.separator + fileName;
 
         logger.info("Exporting transactions to CSV: " + filePath);
 
         try (FileWriter writer = new FileWriter(filePath)) {
-            // Write header
+            // Write header for transactions
             writer.write("Type,Date,Amount,Description,Category,Tags\n");
-            logger.fine("Wrote CSV header");
+            logger.fine("Wrote CSV header for transactions");
 
             // Write transactions
             List<Transaction> transactions = transactionManager.listTransactions();
             assert transactions != null : "Transactions list cannot be null";
-            
+
             for (Transaction transaction : transactions) {
                 assert transaction != null : "Transaction cannot be null";
                 String type = transaction instanceof Income ? "Income" : "Expense";
                 String category = transaction instanceof Expense
                         ? ((Expense) transaction).getCategory().toString()
                         : "";
-                
+
                 assert transaction.getTags() != null : "Transaction tags cannot be null";
                 String tags = String.join(";", transaction.getTags());
 
@@ -323,7 +319,32 @@ public class Storage {
                 logger.fine("Wrote CSV transaction: " + line.trim());
             }
 
-            logger.info("Successfully exported " + transactions.size() + " transactions to CSV");
+            // Add a separator before budget information
+            writer.write("\n# Budget Information\n");
+            writer.write("Month-Year,Budget,SavingsGoal\n");
+
+            // Get all budget entries
+            Map<String, Double> budgets = transactionManager.getAllBudgets();
+            Map<String, Double> savingsGoals = transactionManager.getAllSavingsGoals();
+
+            // Combine all month-year keys from both maps
+            Set<String> allPeriods = new HashSet<>();
+            allPeriods.addAll(budgets.keySet());
+            allPeriods.addAll(savingsGoals.keySet());
+
+            // Write budget and savings goal information
+            for (String period : allPeriods) {
+                double budget = budgets.getOrDefault(period, -1.0);
+                double savingsGoal = savingsGoals.getOrDefault(period, -1.0);
+
+                writer.write(String.format("%s,%.2f,%.2f\n",
+                        period,
+                        budget,
+                        savingsGoal));
+            }
+
+            logger.info("Successfully exported " + transactions.size() + " transactions and " +
+                    allPeriods.size() + " budget/savings entries to CSV");
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Error exporting to CSV", e);
             throw e;

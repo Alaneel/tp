@@ -31,7 +31,7 @@ class HelpCommandTest {
         String result = helpCommand.execute(transactionManager, ui, storage);
 
         // Check that the result contains information about all available commands
-        assertTrue(result.contains("Available command words:"));
+        assertTrue(result.contains("Available commands:"));
         assertTrue(result.contains("income"));
         assertTrue(result.contains("expense"));
         assertTrue(result.contains("list"));

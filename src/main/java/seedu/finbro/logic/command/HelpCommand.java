@@ -4,8 +4,6 @@ import seedu.finbro.model.TransactionManager;
 import seedu.finbro.storage.Storage;
 import seedu.finbro.ui.Ui;
 
-//TODO: update HelpCommand to use the new friendly CLI
-
 /**
  * Represents a help command.
  */
@@ -20,21 +18,25 @@ public class HelpCommand implements Command {
      */
     @Override
     public String execute(TransactionManager transactionManager, Ui ui, Storage storage) {
-        return "Available command words:\n\n" +
-                "expense  | AMOUNT , d/DESCRIPTION , [c/CATEGORY] , [t/TAG...] => Add an expense transaction\n" +
-                "income   | AMOUNT , d/DESCRIPTION , [t/TAG...] => Add an income transaction\n" +
-                "list     | [d/DATE] , [n/NUMBER] => List transactions\n" +
-                "delete   | INDEX => Delete a transaction\n" +
-                "edit     | KEYWORD , [a/AMOUNT] , [d/DESCRIPTION] , [date/DATE] , [c/CATEGORY] , [t/TAG] " +
-                "=> Edit a transaction\n" +
-                "filter   | d/DATE , [to/DATE] =>  Filter transactions by date\n" +
-                "summary  | [m/MONTH] [y/YEAR] - View financial summary\n" +
-                "export   | [f/FORMAT] - Export data (csv or txt)\n" +
-                "search   | KEYWORD => Search transactions\n" +
-                "balance  | View current balance\n" +
-                "exit     | Exit the program\n" +
-                "clear    | Clear all data\n" +
-                "help     | Show this help message";
+        return "FinBro uses an interactive command experience. Type a command and follow the prompts.\n\n" +
+                "Available commands:\n\n" +
+                "income   => Add income transaction (prompts for amount, description, tags)\n" +
+                "expense  => Add expense transaction (prompts for amount, description, category, tags)\n" +
+                "list     => List transactions (prompts for optional date and limit)\n" +
+                "delete   => Delete a transaction (prompts for index)\n" +
+                "edit     => Edit a transaction (prompts for index and fields to update)\n" +
+                "filter   => Filter transactions by date (prompts for start/end dates)\n" +
+                "search   => Search transactions (prompts for keyword)\n" +
+                "balance  => View current balance\n" +
+                "summary  => View financial summary (prompts for month/year)\n" +
+                "setbudget => Set a monthly budget (prompts for month/year and amount)\n" +
+                "trackbudget => Track your budget progress (prompts for month/year)\n" +
+                "setsavings => Set a savings goal (prompts for month/year and amount)\n" +
+                "tracksavings => Track your savings progress (prompts for month/year)\n" +
+                "export   => Export data (prompts for format: csv or txt)\n" +
+                "clear    => Clear all data (with confirmation)\n" +
+                "exit     => Exit the program\n" +
+                "help     => Show this help message";
     }
 
     /**

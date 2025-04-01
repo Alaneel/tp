@@ -1,15 +1,17 @@
 # FinBro - Personal Finance Manager
 
-![FinBro Logo](docs/images/finbro_logo.png)
+![FinBro Logo](img/FinBro.png)
 
 ## Overview
 
-FinBro is a streamlined command-line application designed to help you efficiently manage your personal finances. With its intuitive CLI interface, FinBro enables you to track your income and expenses, categorize transactions, generate financial summaries, and export your financial data—all from the comfort of your terminal.
+FinBro is a streamlined command-line application designed to help you efficiently manage your personal finances. With its intuitive interactive CLI interface, FinBro enables you to track your income and expenses, categorize transactions, set budgets, establish savings goals, generate financial summaries, and export your financial data—all from the comfort of your terminal.
 
 ## Key Features
 
 * **Transaction Management**: Record income and expenses with detailed descriptions and custom tags
 * **Categorization System**: Organize expenses into predefined categories for better financial insights
+* **Budget Tracking**: Set monthly budgets and track your spending against them
+* **Savings Goals**: Establish savings targets and monitor your progress
 * **Smart Search**: Find transactions using keywords or date ranges
 * **Real-time Balance**: View your current financial position at any time
 * **Financial Analysis**: Generate comprehensive summaries to understand your spending patterns
@@ -28,22 +30,86 @@ FinBro is a streamlined command-line application designed to help you efficientl
 
 ### Adding Income
 ```
-income 3000 d/Monthly salary t/work
+> income
+Enter amount:
+> 3000
+Enter description:
+> Monthly salary
+Enter up to 3 tags (separated by space or comma), or press Enter to skip:
+> work
 ```
 
 ### Recording an Expense
 ```
-expense 25.50 d/Lunch c/Food t/work
+> expense
+Enter amount:
+> 25.50
+Enter description:
+> Lunch
+Please select a category by entering its corresponding index
+0 - OTHERS
+1 - FOOD
+2 - TRANSPORT
+3 - SHOPPING
+4 - BILLS
+5 - ENTERTAINMENT
+> 1
+Enter up to 3 tags (separated by space or comma), or press Enter to skip:
+> work
+```
+
+### Setting a Monthly Budget
+```
+> setbudget
+Please enter the month (1-12). (Leave blank for current month)
+> 4
+Please enter the year. (Leave blank for current year)
+> 2025
+Enter your budget:
+> 1500
+```
+
+### Tracking Your Budget
+```
+> trackbudget
+Please enter the month (1-12). (Leave blank for current month)
+> 4
+Please enter the year. (Leave blank for current year)
+> 2025
+```
+
+### Setting a Savings Goal
+```
+> setsavings
+Please enter the month (1-12). (Leave blank for current month)
+> 4
+Please enter the year. (Leave blank for current year)
+> 2025
+Enter your savings goal:
+> 500
+```
+
+### Tracking Your Savings Progress
+```
+> tracksavings
+Please enter the month (1-12). (Leave blank for current month)
+> 4
+Please enter the year. (Leave blank for current year)
+> 2025
 ```
 
 ### Checking Your Balance
 ```
-balance
+> balance
 ```
 
 ### Viewing a Monthly Summary
 ```
-summary m/2 y/2025
+> summary
+Please enter the month (1-12). (Leave blank for current month)
+> 4
+Please enter the year. (Leave blank for current year)
+> 2025
 ```
 
 ## Documentation
