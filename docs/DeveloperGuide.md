@@ -1292,7 +1292,7 @@ The `SummaryCommand` generates financial reports with the following capabilities
 
 This sequence diagram illustrates the process when a user adds a new transaction:
 
-```puml
+``` puml
 @startuml
 !theme plain
 skinparam sequenceMessageAlign center
@@ -1375,7 +1375,7 @@ deactivate FinBro
 
 This sequence diagram illustrates the process of searching for transactions:
 
-```puml
+``` puml
 @startuml
 !theme plain
 skinparam sequenceMessageAlign center
