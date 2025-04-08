@@ -1,6 +1,6 @@
 # FinBro - Personal Finance Manager
 
-![FinBro Logo](docs/img/FinBro.png)
+![FinBro Logo](img/FinBro.png)
 
 ## Overview
 
@@ -20,7 +20,7 @@ FinBro is a streamlined command-line application designed to help you efficientl
 ## Quick Start Guide
 
 1. Ensure you have Java 17 installed on your computer
-2. Download the latest version of FinBro from the [releases page](https://github.com/yourusername/finbro/releases)
+2. Download the latest version of FinBro from the [releases page](https://github.com/AY2425S2-CS2113-W13-3/tp/releases)
 3. Run the application using the command:
    ```
    java -jar FinBro.jar
