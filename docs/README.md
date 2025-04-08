@@ -20,7 +20,7 @@ FinBro is a streamlined command-line application designed to help you efficientl
 ## Quick Start Guide
 
 1. Ensure you have Java 17 installed on your computer
-2. Download the latest version of FinBro from the [releases page](https://github.com/yourusername/finbro/releases)
+2. Download the latest version of FinBro from the [releases page](https://github.com/AY2425S2-CS2113-W13-3/tp/releases)
 3. Run the application using the command:
    ```
    java -jar FinBro.jar
@@ -114,8 +114,8 @@ Please enter the year. (Leave blank for current year)
 
 ## Documentation
 
-* [User Guide](docs/UserGuide.md) - Comprehensive instructions for using FinBro
-* [Developer Guide](docs/DeveloperGuide.md) - Technical documentation for developers
+* [User Guide](UserGuide.md) - Comprehensive instructions for using FinBro
+* [Developer Guide](DeveloperGuide.md) - Technical documentation for developers
 
 ## Project Structure
 
@@ -142,7 +142,7 @@ finbro/
 
 ## Contributing
 
-Contributions to FinBro are welcome! Please refer to the [Developer Guide](docs/DeveloperGuide.md) for details on the project architecture and contribution guidelines.
+Contributions to FinBro are welcome! Please refer to the [Developer Guide](DeveloperGuide.md) for details on the project architecture and contribution guidelines.
 
 ## License
 
